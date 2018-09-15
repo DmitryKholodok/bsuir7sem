@@ -1,10 +1,9 @@
 package by.bsuir.piris.demo.dao.model.client;
 
-import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -19,7 +18,7 @@ public class PassportModel {
     private String number;
     private String numberId;
     private String issuedBy;
-    private Instant issueDate;
+    private LocalDateTime issueDate;
 
     private String regAddr;
 

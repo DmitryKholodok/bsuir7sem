@@ -8,10 +8,10 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
-import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Getter
-@Setter // todo накатать по новой базу - добавил юник индекс
+@Setter
 @Builder
 public class Client {
 
@@ -30,7 +30,7 @@ public class Client {
     private String patronymic;
 
     @NotBlank
-    private Instant dateOfBirth;
+    private LocalDateTime dateOfBirth;
 
     @NotBlank
     private String sex;

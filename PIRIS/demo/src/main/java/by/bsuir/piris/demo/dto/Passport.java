@@ -8,7 +8,7 @@ import org.hibernate.validator.constraints.Range;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
-import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -33,7 +33,7 @@ public class Passport {
     private String issuedBy;
 
     @NotNull
-    private Instant issueDate;
+    private LocalDateTime issueDate;
 
     @NotNull
     private String regAddr;

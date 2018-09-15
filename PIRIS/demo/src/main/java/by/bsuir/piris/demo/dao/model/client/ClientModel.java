@@ -1,12 +1,10 @@
 package by.bsuir.piris.demo.dao.model.client;
 
 import by.bsuir.piris.demo.dao.model.AddressModel;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -20,7 +18,7 @@ public class ClientModel {
     private String surname;
     private String name;
     private String patronymic;
-    private Instant dateOfBirth;
+    private LocalDateTime dateOfBirth;
     private String sex;
     private Boolean isPensioner;
     private Integer monthlyIncome;
