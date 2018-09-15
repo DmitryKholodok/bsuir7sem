@@ -1,8 +1,6 @@
 package by.bsuir.piris.demo.dto;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
@@ -13,20 +11,22 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Client {
 
     private Integer clientId;
 
     @NotBlank
-    @Pattern(regexp = "\\s+")
+    @Pattern(regexp = "[A-Za-z]+")
     private String surname;
 
     @NotBlank
-    @Pattern(regexp = "\\s+")
+    @Pattern(regexp = "[A-Za-z]+")
     private String name;
 
     @NotBlank
-    @Pattern(regexp = "\\s+")
+    @Pattern(regexp = "[A-Za-z]+")
     private String patronymic;
 
     @NotBlank
