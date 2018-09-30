@@ -37,7 +37,7 @@ public class Client {
 
     @NotBlank
     private String placeOfBirth;
-    
+
     @NotNull
     @Valid
     private Passport passport;

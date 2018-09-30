@@ -6,6 +6,7 @@ import org.hibernate.validator.constraints.Range;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 
 @Getter
@@ -18,7 +19,7 @@ public class Passport {
     private Integer passportId;
 
     @NotBlank
-    @Range(min = 2, max = 2)
+    @Size(min = 2, max = 2)
     private String series;
 
     @NotBlank
