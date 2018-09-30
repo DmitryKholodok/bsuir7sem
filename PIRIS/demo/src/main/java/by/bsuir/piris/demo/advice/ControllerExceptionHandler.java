@@ -2,12 +2,13 @@ package by.bsuir.piris.demo.advice;
 
 import by.bsuir.piris.demo.exception.InvalidEntityException;
 import lombok.extern.slf4j.Slf4j;
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-@ControllerAdvice
+@ControllerAdvice("by.bsuir.piris.demo.controller")
 @Slf4j
 public class ControllerExceptionHandler {
 
@@ -18,11 +19,9 @@ public class ControllerExceptionHandler {
     }
 
     @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
-    @ExceptionHandler(Exception.class) // DB CONSTRAINTS
-    public void handleInvalidEntityException(Exception ex) {
+    @ExceptionHandler({ConstraintViolationException.class}) // DB CONSTRAINTS
+    public void handleConstraintViolationExceptionException(ConstraintViolationException ex) {
         log.debug("Caught Exception: {}. Returned bad request status", ex.getMessage());
     }
-
-
 
 }
