@@ -29,7 +29,7 @@ public class Client {
     @Pattern(regexp = "[A-Za-z]+")
     private String patronymic;
 
-    @NotBlank
+    @NotNull
     private LocalDateTime dateOfBirth;
 
     @NotBlank
@@ -37,7 +37,7 @@ public class Client {
 
     @NotBlank
     private String placeOfBirth;
-
+    
     @NotNull
     @Valid
     private Passport passport;
