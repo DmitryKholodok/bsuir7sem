@@ -27,15 +27,15 @@ public class ClientModel {
     private String email;
     private String mobTel;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "ms_id")
     private MaritalStatusModel maritalStatus;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "cs_id")
     private CitizenShipModel citizenShip;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "disability_id")
     private DisabilityModel disability;
 

@@ -152,6 +152,7 @@ public class ClientServiceImpl implements ClientService {
 
     private PassportModel toPassportModel(Passport passport) {
         PassportModel passportModel = new PassportModel();
+        passportModel.setPassportId(passport.getPassportId());
         passportModel.setIssueDate(passport.getIssueDate());
         passportModel.setIssuedBy(passport.getIssuedBy());
         passportModel.setNumber(passport.getNumber());
@@ -163,6 +164,7 @@ public class ClientServiceImpl implements ClientService {
 
     private AddressModel toAddressModel(Address address) {
         AddressModel addressModel = new AddressModel();
+        addressModel.setAddressId(address.getAddressId());
         addressModel.setAddress(address.getCurrAddr());
         addressModel.setTel(address.getHomeTel());
         addressModel.setCity(toCityModel(address));

@@ -14,7 +14,7 @@ public class AddressModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer addressId;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "city_id")
     private CityModel city;
 
