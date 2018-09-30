@@ -17,4 +17,12 @@ public class ControllerExceptionHandler {
         log.debug("Caught InvalidEntityException: {}. Returned bad request status", ex.getMessage());
     }
 
+    @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
+    @ExceptionHandler(Exception.class) // DB CONSTRAINTS
+    public void handleInvalidEntityException(Exception ex) {
+        log.debug("Caught Exception: {}. Returned bad request status", ex.getMessage());
+    }
+
+
+
 }

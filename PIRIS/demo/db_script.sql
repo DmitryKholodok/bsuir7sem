@@ -142,3 +142,9 @@ CREATE TABLE IF NOT EXISTS `piris`.`client` (
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+alter table client
+  add constraint FIO_UNIQUE UNIQUE (name, surname, patronymic);
+
+alter table passport
+    add CONSTRAINT NUMBER_ID_UNIQUE UNIQUE (number_id);
